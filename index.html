@@ -2,107 +2,169 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça nossa coleção de roupas e acompanhe as novidades nas redes sociais.">
-  <title>Violeta | Catálogo de Moda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Brava Burger | Cardápio Digital</title>
+  <meta name="description" content="Cardápio digital do Brava Burger: lanches artesanais, porções e bebidas. Monte seu pedido e envie direto pelo WhatsApp.">
+  <meta name="theme-color" content="#FF7518">
+  <link rel="icon" href="image/logo.png">
+
+  <!-- TROQUE https://SEU-SITE.com.br/ pelo endereço real do site depois de publicar -->
+  <link rel="canonical" href="https://SEU-SITE.com.br/">
+
+  <!-- SEO DE COMPARTILHAMENTO (WhatsApp, Facebook, Instagram, Telegram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brava Burger">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Brava Burger | Cardápio Digital">
+  <meta property="og:description" content="Lanches artesanais, porções e bebidas. Monte seu pedido e envie direto pelo WhatsApp.">
+  <meta property="og:url" content="https://SEU-SITE.com.br/">
+  <!-- Imagem 1200x630. Depois troque por image/og-capa.jpg (endereço completo, com o seu domínio) -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hambúrguer artesanal do Brava Burger">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brava Burger | Cardápio Digital">
+  <meta name="twitter:description" content="Lanches artesanais, porções e bebidas. Peça direto pelo WhatsApp.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <!-- DADOS ESTRUTURADOS PARA O GOOGLE -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Brava Burger","url":"https://SEU-SITE.com.br/","image":"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&h=630&q=80","telephone":"+5549991023413","servesCuisine":"Hambúrguer","menu":"https://SEU-SITE.com.br/#cardapio"}
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="announcement">ESTILO, PERSONALIDADE E CONFORTO — DESCUBRA A COLEÇÃO</div>
+  <div class="topbar">ENTREGA RÁPIDA • PEÇA DIRETO PELO WHATSAPP</div>
 
   <header>
-    <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="#inicio">violeta<span>.</span></a>
-      <div class="nav-links">
-        <a href="#inicio">Início</a>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Redes sociais</a>
-      </div>
-      <a class="nav-cta" href="#catalogo">VER COLEÇÃO</a>
+    <nav class="nav">
+      <a class="brand" href="#inicio">Brava<span>Burger</span></a>
+      <button type="button" class="cart-trigger" id="openCartBtn" aria-label="Abrir sacola">
+        <svg class="cart-icon-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        Sacola <span class="cart-badge" id="cartCount">0</span>
+      </button>
     </nav>
+    <div class="status-strip" id="storeStatus" role="status"></div>
   </header>
 
   <main>
     <section class="hero" id="inicio">
       <div>
-        <div class="eyebrow">Nova coleção • 2026</div>
-        <h1>Vista o que<br>faz você ser<br><em>única.</em></h1>
-        <p class="hero-copy">Peças escolhidas com carinho para acompanhar seu estilo em todos os momentos. Encontre seus novos favoritos na nossa coleção.</p>
-        <div class="hero-actions">
-          <a class="button-primary" href="#catalogo">Explorar catálogo</a>
-          <a class="button-outline" href="#contato">Fale com a gente</a>
-        </div>
+        <span class="eyebrow">Artesanal de verdade</span>
+        <h1>Sabor que mata a fome na primeira mordida.</h1>
+        <p>Escolha seus lanches, porções e bebidas favoritas. Monte seu pedido na sacola e envie direto para o nosso WhatsApp em segundos.</p>
+        <a class="btn-primary" href="#cardapio">Ver Cardápio</a>
       </div>
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85" alt="Duas mulheres usando looks de moda em uma rua">
-        <div class="hero-note">Seu estilo, suas escolhas.</div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Hambúrguer artesanal suculento">
       </div>
     </section>
 
-    <section class="section" id="catalogo">
-      <div class="section-heading">
-        <div class="eyebrow">Escolha seus favoritos</div>
-        <h2>Nosso catálogo</h2>
-        <p>Uma seleção especial para renovar seu guarda-roupa.</p>
+    <section class="section" id="cardapio">
+      <div class="section-header">
+        <h2>Nosso Cardápio</h2>
+        <p>Selecione uma categoria ou adicione direto ao seu pedido</p>
       </div>
-
-      <!-- Os botões de filtro e os produtos serão gerados automaticamente pelo script.js -->
-      <div class="filters" id="categoryFilters" aria-label="Filtrar produtos"></div>
-      <div class="products" id="productsGrid"></div>
+      <div class="filters" id="categoryFilters"></div>
+      <div class="menu-grid" id="menuGrid"></div>
     </section>
 
-    <!-- MODAL DE DETALHES DA PEÇA -->
-    <div class="modal-overlay" id="productModal">
-      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <button type="button" class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
-        <div class="modal-img-wrap">
-          <img id="modalImg" src="" alt="">
-        </div>
-        <div class="modal-content">
-          <span class="modal-category" id="modalCategory"></span>
-          <h3 class="modal-title" id="modalTitle"></h3>
-          <p class="modal-tagline" id="modalTagline"></p>
-          <p class="modal-desc" id="modalDesc"></p>
-          <a id="modalWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="whatsapp-cta">
-            Consultar no WhatsApp
-          </a>
-        </div>
+    <!-- HORÁRIO DE FUNCIONAMENTO -->
+    <section class="section info" id="horarios">
+      <div class="section-header">
+        <h2>Horário de Funcionamento</h2>
+        <p id="statusText"></p>
       </div>
-    </div>
-
-    <section class="about" id="sobre">
-      <div class="about-inner">
-        <div class="eyebrow">Um pouco sobre nós</div>
-        <h2>Moda que combina com você.</h2>
-        <p>Acreditamos que se vestir é uma forma de expressar quem somos. Por isso, selecionamos peças que unem beleza, conforto e personalidade. Explore o catálogo e fale com a gente para saber mais sobre tamanhos, disponibilidade e novidades.</p>
-      </div>
+      <ul class="hours" id="hoursList"></ul>
     </section>
 
-    <section class="social" id="contato">
-      <div class="eyebrow">Vamos nos conectar?</div>
-      <h2>Acompanhe nossas novidades</h2>
-      <p>Confira lançamentos, inspirações e entre em contato pelas nossas redes.</p>
-      <div class="social-links">
-        <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-          <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
-          Instagram
-        </a>
-        <a class="social-link" href="https://wa.me/5549991023413" target="_blank" rel="noopener noreferrer">
-          <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2 2 3.5 4 4l1-1 2 1c-.2 1.2-1.2 2-2.4 2-3.2-.5-5.6-2.9-6.1-6.1 0-1.2.8-2.2 2-2.4l1 2-1 1.5"/></svg>
-          WhatsApp
+    <!-- REDES SOCIAIS -->
+    <section class="social-section">
+      <div class="social-box">
+        <span class="eyebrow">Siga a gente</span>
+        <h2>Fique por dentro das novidades</h2>
+        <p>Acompanhe bastidores, sorteios e lançamentos exclusivos no nosso Instagram.</p>
+        <!-- TROQUE pelo link real do perfil, ex: https://instagram.com/bravaburger -->
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="btn-instagram">
+          <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+          Visitar Instagram
         </a>
       </div>
     </section>
   </main>
 
+  <!-- BOTÃO FIXO "VER SACOLA" (celular) -->
+  <button type="button" class="sticky-cart" id="stickyCart" hidden>
+    <span id="stickyInfo">Ver sacola</span>
+    <strong id="stickyTotal">R$ 0,00</strong>
+  </button>
+
+  <!-- GAVETA DO CARRINHO -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Sua sacola de pedidos">
+    <div class="cart-header">
+      <div class="cart-brand">
+        <img src="image/logo.png" alt="Brava Burger" class="cart-logo">
+        <h3>Sua Sacola</h3>
+      </div>
+      <button type="button" class="close-btn" id="closeCartBtn" aria-label="Fechar sacola">&times;</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer" id="cartFooter" hidden>
+      <p class="closed-note" id="closedNote" hidden></p>
+      <div class="order-fields">
+        <input type="text" id="customerName" placeholder="Seu nome" maxlength="60" autocomplete="name">
+        <input type="text" id="customerAddress" placeholder="Endereço de entrega (ou Retirada)" maxlength="150" autocomplete="street-address">
+        <select id="paymentMethod">
+          <option value="Pix">Pagamento: Pix</option>
+          <option value="Cartão na entrega">Pagamento: Cartão na entrega</option>
+          <option value="Dinheiro">Pagamento: Dinheiro</option>
+        </select>
+        <input type="text" id="orderNotes" placeholder="Observações (ex: sem cebola, troco para 50)" maxlength="200">
+      </div>
+      <div class="cart-total-row">
+        <span>Total do Pedido</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <button type="button" class="btn-whatsapp" id="checkoutBtn">Concluir Pedido no WhatsApp</button>
+    </div>
+  </aside>
+
+  <!-- MODAL DE ADICIONAIS -->
+  <div class="modal" id="optModal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="optTitle">
+      <button type="button" class="close-btn modal-close" data-close-modal aria-label="Fechar">&times;</button>
+      <h3 id="optTitle"></h3>
+      <p class="modal-desc" id="optDesc"></p>
+      <p class="opt-label">Deseja adicionar algo?</p>
+      <div id="optList"></div>
+      <button type="button" class="btn-primary btn-block" id="optAddBtn">Adicionar</button>
+    </div>
+  </div>
+
+  <!-- TELA DE CONFIRMAÇÃO -->
+  <div class="modal" id="confirmModal" hidden>
+    <div class="modal-box confirm-box" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <button type="button" class="close-btn modal-close" data-close-modal aria-label="Fechar">&times;</button>
+      <div class="confirm-check" aria-hidden="true">✓</div>
+      <h3 id="confirmTitle">Pedido montado!</h3>
+      <p class="modal-desc">Pedido <strong id="confirmId"></strong> • <strong id="confirmTotal"></strong></p>
+      <p class="modal-desc">Abrimos o WhatsApp com o seu pedido pronto. <strong>Toque em Enviar na conversa</strong> para a loja receber.</p>
+      <a class="btn-whatsapp-link" id="confirmWpp" href="#" target="_blank" rel="noopener noreferrer">Abrir WhatsApp novamente</a>
+      <button type="button" class="btn-ghost" id="confirmNewBtn">Fazer novo pedido</button>
+    </div>
+  </div>
+
   <footer>
-    <div class="footer-brand">violeta.</div>
-    <p>© <span id="ano">2026</span> Violeta — Todos os direitos reservados.</p>
+    <p>© <span id="ano">2026</span> Brava Burger — Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
