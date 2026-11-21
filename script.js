@@ -4,7 +4,7 @@
    CARDÁPIO DIGITAL COM CARRINHO E ENVIO PARA WHATSAPP
    ========================================================== */
 
-const WHATSAPP_NUMBER = '5549991023413';
+const WHATSAPP_NUMBER = '5549999971074'; // Troque para o número do WhatsApp (com DDI + DDD, sem espaços ou símbolos)
 const CART_KEY = 'bravaCart';
 
 /* ---------- HORÁRIO DE FUNCIONAMENTO (EDITE AQUI) ----------
